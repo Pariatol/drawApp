@@ -20,11 +20,13 @@ for(let i=0;i<1856;i++){
     miniBox.id = nb;
     nb += 1;
 
-    JSON.parse(previouslySaved).map(item=>{
-        if(item.id === miniBox.id){
-            miniBox.style.backgroundColor = item.color;
-        }
-    });
+    if(previouslySaved.length>0){
+        JSON.parse(previouslySaved).map(item=>{
+            if(item.id === miniBox.id){
+                miniBox.style.backgroundColor = item.color;
+            }
+        });
+    }
 
 
 
