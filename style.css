@@ -132,6 +132,17 @@ input[type="color"]:hover{
     color:red;
 }
 
+.fa-sync-alt{
+    margin-top:1rem;
+    font-size:2.8rem;
+    color:rgb(192, 189, 189);
+    cursor:pointer;
+}
+
+.fa-sync-alt:hover{
+    color:#D1A739;
+}
+
 .fa-save{
     font-size:3rem; 
     margin-top:0.5rem;
@@ -176,7 +187,7 @@ input[type="color"]:hover{
     background-color: #f7f7f7;
     border-radius:1rem;
     border:8px solid #D1A739;
-    font-size:2rem;
+    font-size:1.8rem;
     font-family:Arial, Helvetica, sans-serif;
     flex-direction: column;
     justify-content: space-evenly;
@@ -242,6 +253,50 @@ input[type="color"]:hover{
     .app{
         flex-direction: column;
         height:100%;
+    }
+
+    .colorPanel h2{
+        font-size:1.5rem;
+    }
+
+    .colorItem{
+        height:1.8rem;
+        width:1.8rem;
+    }
+
+    input[type="color"]{
+        width:1.8rem;
+        height:1.8rem;
+        cursor:pointer;
+    }
+
+    .customColor{
+        display:flex;
+        flex-direction: row;
+    }
+}
+
+@media(max-width:415px){
+    .wrapper{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .app{
+        flex-direction: column;
+        height:100%;
+    }
+
+    .paintDiv{
+        min-width:310px;
+        max-width:395px;
+    
+        min-height:700px;
+        max-height:700px;
+        overflow:hidden;
     }
 
     .colorPanel h2{

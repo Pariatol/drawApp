@@ -54,6 +54,18 @@ for(let i=0;i<1856;i++){
             }
         })
     })
+
+    miniBox.addEventListener('long-press',(e)=>{
+        e.preventDefault();
+        miniBox.style.backgroundColor = "black";
+
+        // remove item from draw array
+        draw = draw.filter(item=>{
+            if(item.id !== miniBox.id){
+                return item;
+            }
+        })
+    })
     
   }
 
@@ -114,6 +126,13 @@ document.body.addEventListener('keydown',(e)=>{
             draw = [];
         })
     }
+})
+
+document.querySelector(".fa-sync-alt").addEventListener('click',()=>{
+    document.querySelectorAll('.miniBox').forEach(item=>{
+        item.style.backgroundColor = 'black';
+        draw = [];
+    })
 })
 
 document.querySelector('.fa-save').addEventListener('click',()=>{
