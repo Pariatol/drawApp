@@ -8,8 +8,10 @@ let nb = 0;
 let draw = [];
 let previouslySaved = [];
 
-if(localStorage.getItem('drawSave')){
+if(localStorage.getItem('drawSave')!==null){
     previouslySaved = localStorage.getItem('drawSave');
+} else{
+    console.log('nufin')
 }
 
 /* fill the paintdiv */
@@ -27,7 +29,6 @@ for(let i=0;i<1856;i++){
             }
         });
     }
-
 
 
     box.appendChild(miniBox);
