@@ -133,6 +133,7 @@ input[type="color"]:hover{
 }
 
 .fa-sync-alt{
+    display:none!important;
     margin-top:1rem;
     font-size:2.8rem;
     color:rgb(192, 189, 189);
@@ -154,6 +155,10 @@ input[type="color"]:hover{
     color:#D1A739;
 }
 
+.helpSave{
+    position:relative;
+}
+
 .saved{
     display:none;
     justify-content: center;
@@ -167,8 +172,8 @@ input[type="color"]:hover{
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
     box-shadow:1px 0px 5px 4px #D1A739;
-    position:relative;
-    top:-5.5rem;
+    position:absolute;
+    top:-1.5rem;
     left:6rem;
 }
 
@@ -318,4 +323,15 @@ input[type="color"]:hover{
         display:flex;
         flex-direction: row;
     }
+
+    .helpSave{
+        display:flex;
+        align-items: baseline;
+    }
+
+    .fa-sync-alt{
+        display:flex!important;
+        text-align: center;
+    }
+
 }
